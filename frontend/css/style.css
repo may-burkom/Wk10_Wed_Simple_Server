@@ -1,0 +1,10 @@
+body{
+    padding: 5px;
+    font-family: Arial;
+    background-color: rgb(214, 205, 81);
+}
+
+#container{
+    width: 70%;
+    margin: auto;
+}

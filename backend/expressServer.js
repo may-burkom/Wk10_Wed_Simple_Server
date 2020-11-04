@@ -42,7 +42,7 @@ mongoose.connect(pswDB, {useNewUrlParser: true, useUnifiedTopology: true},
 
 //find previous entries to display
 app.get('/display', function(req, res){
-    console.log("ROOT route hit")
+    console.log("display route hit")
     //if parameters not specified, everything will get sent back
     People.find({})
         .then(function(storedInfo){
@@ -68,6 +68,7 @@ app.post('/register', function(req, res){
         .then(function(user) {
             console.log("USER SAVED!")
             console.log(user)
+            res.send(user)
         })
         .catch(function(err) {
             console.log(err)
